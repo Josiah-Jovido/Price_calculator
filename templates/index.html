@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>HOUSE PRICE PREDICTOR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    html {
+      font-size: 62.5%;
+    }
+    body {
+      background: #295fe5;
+      font-family: 'Poppins', sans-serif;
+      background-size: cover;
+    }
+    .container-fluid {
+      width: 80%;
+    }
+    main {
+      background: #fff;
+      border-radius: 5px;
+      margin: 6rem 13rem;
+      padding: 6rem 0 3rem 0;
+    }
+    form {
+      margin: 3rem 0;
+      margin-top: 6rem;
+      border: 1px solid #ccc;
+      padding: 3.5rem;
+      border-radius: 5px;
+    }
+    label {
+      color: #000;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .form-group {
+      margin-bottom: 2rem;
+    }
+    .form-control {
+      height: 4.5rem;
+      color: #b5b5b5;
+      font-size: 1.2rem;
+      padding-left: 1.5rem;
+    }
+    .btn.btn-outline-primary {
+      color: #295fe5;
+      border-color: #295fe5;
+      font-size: 1.6rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+    .btn.btn-outline-primary:hover {
+      background: #295fe5;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container-fluid">
+      <div class="text-center">
+        <h1>HOUSE PRICE PREDICTOR</h1>
+        <p>Designed by Name of Author</p>
+      </div>
+      <form action="{{ url_for('predict')}}" method="post">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label for="overallqual">OverallQual *</label>
+              <input type="text" class="form-control" name="overallqual" id="overallqual" placeholder="1 - 10" required>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label for="grlivarea">GrLivArea *</label>
+              <input type="text" class="form-control" name="grlivarea" id="grlivarea" placeholder="334 - 5642" required>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label for="garagecars">GarageCars *</label>
+              <input type="text" class="form-control" name="garagecars" id="garagecars" placeholder="0 - 4" required>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label for="garagearea">GarageArea *</label>
+              <input type="text" class="form-control" name="garagearea" id="garagearea" placeholder="0 - 1418" required>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label for="totalbsmtsf">TotalBsmtSF *</label>
+              <input type="text" class="form-control" name="totalbsmtsf" id="totalbsmtsf" placeholder="0 - 6110" required>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <label for="1stflrsf">1stFlrSF *</label>
+              <input type="text" class="form-control" name="1stflrsf" id="1stflrsf" placeholder="334 - 4692" required>
+            </div>
+          </div>
+        </div>
+        <div class="text-right">
+          <button type="submit" class="btn btn-outline-primary">Predict</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

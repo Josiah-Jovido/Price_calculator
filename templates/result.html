@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>HOUSE PRICE PREDICTOR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    html {
+      font-size: 62.5%;
+    }
+    body {
+      background: #295fe5;
+      font-family: 'Poppins', sans-serif;
+      background-size: cover;
+    }
+    .container-fluid {
+      width: 80%;
+    }
+    main {
+      background: #fff;
+      border-radius: 5px;
+      margin: 6rem 13rem;
+      padding: 6rem 0 3rem 0;
+    }
+    p{
+        font-size: 17px;
+    }
+    main > div {
+        margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+    <main>
+        <div class="container-fluid">
+            <h1>Random Forest Regressor</h1>
+            <p>{{ pred_text1 }}</p>
+            <p>{{ sq1 }}</p>
+        </div>
+        <div class="container-fluid">
+            <h1>Ada Boost Regressor</h1>
+            <p>{{ pred_text2 }}</p>
+            <p>{{ sq2 }}</p>
+        </div>
+        <div class="container-fluid">
+            <h1>Decision Tree Regressor</h1>
+            <p>{{ pred_text3 }}</p>
+            <p>{{ sq3 }}</p>
+        </div>
+        <div class="container-fluid">
+            <h1>Linear Regression</h1>
+            <p>{{ pred_text4 }}</p>
+            <p>{{ sq4 }}</p>
+        </div>
+        <div class="container-fluid">
+            <h1>Ridge</h1>
+            <p>{{ pred_text5 }}</p>
+            <p>{{ sq5 }}</p>
+        </div>
+        <div class="container-fluid">
+            <h1>SVR</h1>
+            <p>{{ pred_text6 }}</p>
+            <p>{{ sq6 }}</p>
+        </div>
+    </main>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
